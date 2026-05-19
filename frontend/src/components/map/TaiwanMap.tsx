@@ -40,7 +40,10 @@ export default function TaiwanMap({ regions, posts }: Props) {
   return (
     <div className="w-full flex flex-col xl:flex-row gap-10 items-start">
       {/* ── 3D Map ── */}
-      <div className="w-full xl:w-[480px] shrink-0 rounded-2xl overflow-hidden shadow-xl border border-white/60">
+      <div
+        className="w-full xl:w-[480px] shrink-0 rounded-2xl overflow-hidden shadow-xl"
+        style={{ height: 520, background: "#8BBDD0" }}
+      >
         <TaiwanIsland3D
           regions={regions}
           activeSlug={activeSlug}
