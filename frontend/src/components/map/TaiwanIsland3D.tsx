@@ -201,7 +201,7 @@ export default function TaiwanIsland3D({
     <Canvas
       orthographic
       camera={{ zoom: 48, near: 0.1, far: 80 }}
-      shadows
+      shadows={{ type: THREE.PCFShadowMap }}
       gl={{ antialias: true }}
       style={{ width: "100%", height: "100%" }}
       onPointerMissed={() => onRegionClick(null)}
