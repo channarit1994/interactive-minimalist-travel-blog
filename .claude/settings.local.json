@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(gh --version)",
+      "PowerShell(Get-Command node -ErrorAction SilentlyContinue)",
+      "PowerShell(winget --version)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --silent --accept-package-agreements --accept-source-agreements)",
+      "PowerShell(winget install GitHub.cli --silent --accept-package-agreements --accept-source-agreements)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); node --version; npm --version; gh --version)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"g:\\\\Application Project\\\\Interactive Minimalist Travel Blog\\\\frontend\"; npm install framer-motion leaflet react-leaflet @types/leaflet 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"g:\\\\Application Project\\\\Interactive Minimalist Travel Blog\\\\frontend\"; node -e \"const pkg = require\\('./node_modules/next/package.json'\\); console.log\\(pkg.version\\)\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"g:\\\\Application Project\\\\Interactive Minimalist Travel Blog\\\\frontend\"; npm run build 2>&1)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"g:\\\\Application Project\\\\Interactive Minimalist Travel Blog\"; git init -b main; git config user.email \"channarit1994@gmail.com\"; git config user.name \"channarit1994\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"g:\\\\Application Project\\\\Interactive Minimalist Travel Blog\"; git add plan.md .gitignore frontend/src frontend/public frontend/package.json frontend/package-lock.json frontend/next.config.ts frontend/tsconfig.json frontend/.env.local.example frontend/.gitignore; git status --short)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); Set-Location \"g:\\\\Application Project\\\\Interactive Minimalist Travel Blog\"; git add .; git status --short | Select-Object -First 30)"
+    ],
+    "additionalDirectories": [
+      "g:\\Application Project\\Interactive Minimalist Travel Blog\\frontend\\src\\app\\blog",
+      "g:\\Application Project\\Interactive Minimalist Travel Blog\\frontend\\.git"
+    ]
+  }
+}
