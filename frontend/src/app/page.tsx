@@ -5,13 +5,13 @@ export default async function HomePage() {
   const [regions, posts] = await Promise.all([getRegions(), getPosts()]);
 
   return (
-    <section className="min-h-screen flex flex-col items-center px-6 py-16">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-light tracking-tight text-[#2C302E] mb-4">
+    <section className="min-h-screen flex flex-col px-6 lg:px-16 py-12">
+      <div className="mb-12">
+        <h1 className="text-4xl font-light tracking-tight text-[#2C302E] mb-3">
           Stories from Taiwan
         </h1>
-        <p className="text-base text-[#2C302E]/50 max-w-md mx-auto leading-relaxed">
-          Click a city on the map to discover travel stories from that region.
+        <p className="text-sm text-[#2C302E]/45 max-w-sm leading-relaxed">
+          An interactive map of travel stories — each region hides a collection of places, food, and moments.
         </p>
       </div>
       <TaiwanMap regions={regions} posts={posts} />
