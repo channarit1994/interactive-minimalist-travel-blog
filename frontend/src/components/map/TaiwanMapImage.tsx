@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import type { Region } from "@/types";
 
 // ── SVG region polygons ────────────────────────────────────────────────────
@@ -57,14 +56,13 @@ export default function TaiwanMapImage({ regions, activeSlug, onRegionClick }: P
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null);
 
   return (
-    // 2754:1536 = 1.793:1 aspect ratio
-    <div className="relative w-full" style={{ aspectRatio: "2754/1536" }}>
+    <div className="relative w-full h-full">
       {/* Base 3D map image */}
       <Image
         src="/taiwan-3d-map.png"
         alt="Interactive 3D map of Taiwan"
         fill
-        className="object-cover rounded-2xl"
+        className="object-cover"
         priority
         unoptimized
       />
@@ -73,8 +71,7 @@ export default function TaiwanMapImage({ regions, activeSlug, onRegionClick }: P
       <svg
         className="absolute inset-0 w-full h-full"
         viewBox="0 0 2754 1536"
-        preserveAspectRatio="xMidYMid meet"
-        style={{ borderRadius: "1rem" }}
+        preserveAspectRatio="xMidYMid slice"
       >
         {Object.entries(POLYGONS).map(([slug, { pts, lx, ly }]) => {
           const region = regions.find((r) => r.slug === slug);
